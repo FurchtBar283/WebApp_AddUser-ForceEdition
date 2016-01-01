@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="icons/Sensibleworld-Starwars-Darth-Vader.ico" rel="icon">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
+  <link rel="stylesheet" type="text/css"  href="lib/css/kap13_1.css" />
+  <script src="http://code.jquery.com/jquery-1.9.1.min.js" type="text/javascript"></script>
+  <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+  <script src="js/script.js" type="text/javascript"></script>
+	<!-- All possible icon paths
+	href="icons/Sensibleworld-Starwars-Chewbacca.ico"
+	href="icons/Sensibleworld-Starwars-Darth-Vader.ico"
+	href="icons/Sensibleworld-Starwars-Death-Star.ico"
+	href="icons/Sensibleworld-Starwars-Millennium-Falcon.ico"
+	-->
+	<title>DaWebApp - Force edition</title>
+	<meta name="description" content="A webApp for adding persons to a list. Navigation via tabbar.">
+	<link href="css/indexStyle.css" rel="stylesheet">
+</head> <!-- Ende head -->
+
+<body onload="init();">
+	<div data-role="page" data-transition="fade" id="page1">
+		<div data-role="header" data-position="fixed">
+			<h1>DaWebApp - Force edition</h1>
+			<a href="index.html" data-icon="gear" class="ui-btn-right">Options</a>
+		</div> <!-- Ende header -->
+
+		<div data-role="content">
+			<br>
+			<br>
+			<div class="textLabel">
+				<label for="nameTextfield">Name:</label>
+			</div>
+    	<div>
+				<input type="text" name="name" id="nameTextfield" value=""/>
+			</div>
+			<br>
+			<br>
+			<div class="textLabel">
+				<label for="slider-0">Age:</label>
+			</div>
+			<div>
+				<input type="range" name="slider" id="slider-0" value="25" min="0" max="100"/>
+			</div>
+			<br>
+			<br>
+			<div data-role="fieldcontain">
+    		<fieldset data-role="controlgroup" data-type="horizontal">
+    			<legend>Gender:</legend>
+         	<input type="radio" name="genderSelection" id="radio-choice-1" value="male" checked="checked"/>
+         	<label for="radio-choice-1">male</label>
+
+         	<input type="radio" name="genderSelection" id="radio-choice-2" value="female"/>
+         	<label for="radio-choice-2">female</label>
+
+					<input type="radio" name="genderSelection" id="radio-choice-3" value="wookie"/>
+         	<label for="radio-choice-3">wookie</label>
+    		</fieldset>
+			</div>
+			<br>
+			<br>
+			<div>
+				<a href="index.html" data-role="button" id="saveButton">Save</a>
+			</div>
+		</div> <!-- Ende content -->
+
+		<div data-role="footer" data-position="fixed">
+			<h3> Add User </h3>
+			<div data-role="navbar" data-iconpos="top">
+				<ul>
+					<li><a href="#page1" data-transition="fade"	data-theme="" data-icon="plus">Add</a></li>
+					<li><a href="#page2" data-transition="fade"	data-theme="" data-icon="grid">Userlist</a></li>
+					<li><a href="#page3" data-transition="fade"	data-theme="" data-icon="star">Sonstiges</a></li>
+				</ul>
+			</div><!-- Ende navbar -->
+		</div><!-- Ende footer -->
+	</div><!-- Ende page -->
+
+	<div data-role="page" data-transition="fade" id="page2">
+		<div data-role="header" data-position="fixed">
+			<h1>DaWebApp - Force edition</h1>
+			<a href="index.html" data-icon="gear" class="ui-btn-right">Options</a>
+		</div> <!-- Ende header -->
+
+		<div data-role="content">
+			<ul data-role="listview" id="userlist">
+				<script type="text/javascript">
+					listUsers();
+				</script>
+			</ul>
+		</div>
+
+		<div data-role="footer" data-position="fixed">
+			<h3> Userlist </h3>
+			<div data-role="navbar" data-iconpos="top">
+				<ul>
+					<li><a href="#page1" data-transition="fade"	data-theme="" data-icon="plus">Add</a></li>
+					<li><a href="#page2" data-transition="fade"	data-theme="" data-icon="grid">Userlist</a></li>
+					<li><a href="#page3" data-transition="fade"	data-theme="" data-icon="star">Sonstiges</a></li>
+				</ul>
+			</div><!-- Ende navbar -->
+		</div><!-- Ende footer -->
+	</div><!-- Ende page -->
+
+	<div data-role="page" data-transition="fade" id="page3">
+		<div data-role="header" data-position="fixed">
+			<h1>DaWebApp - Force edition</h1>
+			<a href="index.html" data-icon="gear" class="ui-btn-right">Options</a>
+		</div> <!-- Ende header -->
+
+		<div data-role="content">
+		</div>
+
+		<div data-role="footer" data-position="fixed">
+			<h3> Sonstiges </h3>
+			<div data-role="navbar" data-iconpos="top">
+				<ul>
+					<li><a href="#page1" data-transition="fade"	data-theme="" data-icon="plus">Add</a></li>
+					<li><a href="#page2" data-transition="fade"	data-theme="" data-icon="grid">Userlist</a></li>
+					<li><a href="#page3" data-transition="fade"	data-theme="" data-icon="star">Sonstiges</a></li>
+				</ul>
+			</div><!-- Ende navbar -->
+		</div><!-- Ende footer -->
+	</div><!-- Ende page -->
+
+
+</body> <!-- Ende body -->
+</html>

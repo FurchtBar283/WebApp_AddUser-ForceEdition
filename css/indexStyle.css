@@ -1,0 +1,30 @@
+.ui-page { background:#0d0c0c; }
+
+h1{
+	color: white;
+	font-size: 50px;
+}
+
+h2{
+	color: white;
+	font-size: 40px;
+}
+
+h3{
+	color: white;
+	font-size: 30px;
+}
+
+.textLabel{
+	color: white;
+	font-size: 50px;
+	align-self: center;
+}
+
+li, legend{
+	color: white;
+}
+
+.saveButton{
+	width = 25%
+}
